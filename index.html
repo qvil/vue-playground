@@ -5,18 +5,22 @@
 </head>
 
 <body>
+    <h2>App</h2>
     <div id="app">
         {{ message }}
     </div>
+    <h2>App 2</h2>
     <div id="app-2">
         <span v-bind:title="message">
             Hober your mouse over me for a few seconds
             to see my dynamically bound title!
         </span>
     </div>
+    <h2>App 3</h2>
     <div id="app-3">
         <span v-if="seen">Now you see me</span>
     </div>
+    <h2>App 4</h2>
     <div id="app-4">
         <ol>
             <li v-for="todo in todos">
@@ -24,9 +28,15 @@
             </li>
         </ol>
     </div>
+    <h2>App 5</h2>
     <div id="app-5">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <h2>App6</h2>
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
     </div>
 
     <script src="./index.js"></script>

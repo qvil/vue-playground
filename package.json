@@ -13,7 +13,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js && git add ./docs && git commit -m \"Deployed automatically at `date`\" && git push origin master"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js && git add ./docs && git commit -m \"Deployed automatically using vue-gh-pages\" && git push origin master"
   },
   "dependencies": {
     "vue": "^2.5.2",

@@ -3,6 +3,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+// const buildDir = "../dist"; // default
+const buildDir = "../docs"; // custom for github pages
 
 module.exports = {
   dev: {
@@ -45,10 +47,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, `${buildDir}/index.html`),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, `${buildDir}`),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 

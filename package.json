@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Taesu Hyeon <qvil1127@gmail.com>",
+  "homepage": "https://qvil.github.io/vue-playground/",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -11,10 +12,12 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-gh-pages": "^1.7.5",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

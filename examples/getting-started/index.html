@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <h2>App</h2>
+    <div id="app">
+        {{ message }}
+    </div>
+    <h2>App 2</h2>
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hober your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+    <h2>App 3</h2>
+    <div id="app-3">
+        <span v-if="seen">Now you see me</span>
+    </div>
+    <h2>App 4</h2>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+    <h2>App 5</h2>
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <h2>App 6</h2>
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+    <h2>App 7</h2>
+    <div id="app-7">
+        <ol>
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+            >
+            </todo-item>
+        </ol>
+    </div>
+    <!--  -->
+    <script src="./index.js"></script>
+</body>
+
+</html>

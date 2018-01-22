@@ -24,6 +24,7 @@
 
 <template>
     <h1>Hello World</h1>
+    <!-- <router-link to="/users">Go to users</router-link> -->
 </template>
 
 <script>

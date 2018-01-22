@@ -22,6 +22,10 @@
   </section>
 </template>
 
+<template>
+    <h1>Hello World</h1>
+</template>
+
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 

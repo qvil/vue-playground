@@ -26,6 +26,8 @@
   <div>
       <h1>Hello World</h1>
       <router-link to="/users">Go to users</router-link>
+      <br />
+      <nuxt-link to="/users">Go to users using nuxt-link</nuxt-link>
   </div>
 </template>
 

@@ -23,8 +23,10 @@
 </template>
 
 <template>
-    <h1>Hello World</h1>
-    <!-- <router-link to="/users">Go to users</router-link> -->
+  <div>
+      <h1>Hello World</h1>
+      <router-link to="/users">Go to users</router-link>
+  </div>
 </template>
 
 <script>

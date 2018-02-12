@@ -44,8 +44,15 @@
       </tr>
     </table>
     <h2>Today Record</h2>
-    <ul v-for="exercise in exercises" >
-      <li v-if="exercise.count !== 0">{{ `${exercise.text} ${exercise.count}회 x ${exercise.set}세트` }}</li>
+    <!-- input의 0이 sting으로 비교돼서 !== 0 대신 != 씀 -->
+    <ul 
+      v-for="exercise in exercises" 
+      v-show="
+        exercise.count != 0 && exercise.count !== ''
+        && exercise.set != 0 && exercise.set !== ''
+      " 
+    >
+      <li>{{ `${exercise.text} ${exercise.count}회 x ${exercise.set}세트` }}</li>
     </ul>
   </div>
   <script>

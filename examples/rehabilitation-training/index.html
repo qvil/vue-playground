@@ -1,5 +1,4 @@
-<html>
-
+<!DOCTYPE html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <style>
@@ -39,18 +38,21 @@
       </tr>
       <tr>
         <td colspan="3">
-          <button>Record</button>
+          <button @click="recorded = true">Record</button>
+          <button @click="clearTable">Clear Table</button>
+          <button @click="recorded = false">Clear Record</button>
         </td>
       </tr>
     </table>
     <h2>Today Record</h2>
     <!-- input의 0이 sting으로 비교돼서 !== 0 대신 != 씀 -->
     <ul 
-      v-for="exercise in exercises" 
-      v-show="
+      v-for="exercise in exercises"
+      v-if="
         exercise.count != 0 && exercise.count !== ''
         && exercise.set != 0 && exercise.set !== ''
-      " 
+        && recorded
+      "
     >
       <li>{{ `${exercise.text} ${exercise.count}회 x ${exercise.set}세트` }}</li>
     </ul>
@@ -68,7 +70,21 @@
           { text: '롤에 발목대고 중력으로 신전', count: 0, set: 0, },
         ],
         input: "text",
-      }
+        recorded: false,
+      },
+      methods: {
+        clearTable: function() {
+          // for (let index = 0; index < this.exercises.length; index++) {
+          //   const element = this.exercises[index];
+          //   element.count = 0;
+          //   element.set = 0;
+          // }
+          for (const iterator of this.exercises) {
+            iterator.count = 0;
+            iterator.set = 0;
+          }
+        },
+      },
     })
   </script>
 </body>

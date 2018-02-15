@@ -30,27 +30,26 @@
           {{ `${index + 1}. ${exercise.text}` }}
         </td>
         <td>
-          <input type="number" v-model="exercise.count">
+          <input type="number" v-model.number="exercise.count">
         </td>
         <td>
-          <input type="number" v-model="exercise.set">
+          <input type="number" v-model.number="exercise.set">
         </td>
       </tr>
       <tr>
         <td colspan="3">
           <button @click="recorded = true">Record</button>
-          <button @click="clearTable">Clear Table</button>
           <button @click="recorded = false">Clear Record</button>
+          <button @click="clearTable">Clear Table</button>
         </td>
       </tr>
     </table>
     <h2>Today Record</h2>
-    <!-- input의 0이 sting으로 비교돼서 !== 0 대신 != 씀 -->
     <ul 
       v-for="exercise in exercises"
       v-if="
-        exercise.count != 0 && exercise.count !== ''
-        && exercise.set != 0 && exercise.set !== ''
+        exercise.count !== 0 && exercise.count !== ''
+        && exercise.set !== 0 && exercise.set !== ''
         && recorded
       "
     >
@@ -74,11 +73,6 @@
       },
       methods: {
         clearTable: function() {
-          // for (let index = 0; index < this.exercises.length; index++) {
-          //   const element = this.exercises[index];
-          //   element.count = 0;
-          //   element.set = 0;
-          // }
           for (const iterator of this.exercises) {
             iterator.count = 0;
             iterator.set = 0;

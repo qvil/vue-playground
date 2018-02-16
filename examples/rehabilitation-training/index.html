@@ -24,6 +24,7 @@
         <td>Exercise List</td>
         <td>Count</td>
         <td>Set</td>
+        <td>Recommend</td>
       </tr>
       <tr v-for="(exercise, index) in exercises">
         <td>
@@ -35,9 +36,12 @@
         <td>
           <input type="number" v-model.number="exercise.set">
         </td>
+        <td>
+          Recommend Text
+        </td>
       </tr>
       <tr>
-        <td colspan="3">
+        <td colspan="4">
           <button @click="recorded = true">Record</button>
           <button @click="recorded = false">Clear Record</button>
           <button @click="clearTable">Clear Table</button>

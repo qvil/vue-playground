@@ -37,7 +37,7 @@
           <input type="number" v-model.number="exercise.set">
         </td>
         <td>
-          Recommend Text
+          {{ exercise.recommend }}
         </td>
       </tr>
       <tr>
@@ -65,12 +65,12 @@
       el: '#app',
       data: {
         exercises: [
-          { text: '발뒤꿈치 밀어서 무릎 굴곡', count: 0, set: 0, },
-          { text: '플렉스해서 무릎 아래누르기', count: 0, set: 0, },
-          { text: '플렉스 포인 반복', count: 0, set: 0, },
-          { text: '무릎에 롤대고 신전', count: 0, set: 0, },
-          { text: '뒤로 팔꿈치 대고 다리올리기 반대 무릎만큼 천천히 내리기', count: 0, set: 0, },
-          { text: '롤에 발목대고 중력으로 신전', count: 0, set: 0, },
+          { text: '발뒤꿈치 밀어서 무릎 굴곡', count: 0, set: 0, recommend: '통증을 느끼지 않는 범위까지만 굴곡하세요' },
+          { text: '플렉스해서 무릎 아래누르기', count: 0, set: 0, recommend: '허벅지 근육이 수축되는 것을 느끼세요' },
+          { text: '플렉스 포인 반복', count: 0, set: 0, recommend: '허벅지 근육에 집중하세요' },
+          { text: '무릎에 롤대고 신전', count: 0, set: 0, recommend: '' },
+          { text: '뒤로 팔꿈치 대고 다리올리기 반대 무릎만큼 천천히 내리기', count: 0, set: 0, recommend: '천천히 내려야 합니다' },
+          { text: '롤에 발목대고 중력으로 신전', count: 0, set: 0, recommend: '' },
         ],
         input: "text",
         recorded: false,
